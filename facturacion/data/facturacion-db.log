@@ -1,0 +1,12 @@
+/*C4*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C5*/SET SCHEMA PUBLIC
+alter table Cliente add column codigoPostal integer
+alter table Cliente add column municipio varchar(20)
+alter table Cliente add column provincia varchar(30)
+alter table Cliente add column viaPublica varchar(50)
+alter table producto add column fotos varchar(32)
+alter table producto add column observaciones varchar(255)
+alter table producto add column precio numeric(19,2)
+alter table producto add column categoria_oid varchar(32)
+alter table producto add constraint FKm6ry59j1i33qrtahcaf2g4dom foreign key (categoria_oid) references Categoria
