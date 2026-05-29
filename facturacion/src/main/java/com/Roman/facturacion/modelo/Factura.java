@@ -16,6 +16,9 @@ import java.util.Collection;
 @Getter
 @Setter
 
+@View(members = "anyo, numero, fecha;" + "cliente;" +
+        "detalles" + "observaciones")
+
 public class Factura {
     @Id
     @GeneratedValue(generator = "system-uuid")
@@ -46,6 +49,7 @@ public class Factura {
     Cliente cliente;
 
     @ElementCollection
+            @ListProperties("Producto.numero, producto.descripcion, cantidad")
     Collection<Detalle> detalles;
 
 
