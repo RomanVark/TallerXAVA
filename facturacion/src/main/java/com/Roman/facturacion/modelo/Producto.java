@@ -14,7 +14,7 @@ import java.math.BigDecimal;
 @Entity
 @Getter @Setter
 
-public class producto {
+public class Producto {
     @Id
     @Column(length = 9)
     int numero;
